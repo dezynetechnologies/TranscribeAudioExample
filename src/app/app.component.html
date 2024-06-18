@@ -1,0 +1,17 @@
+<!-- <div class="container">
+  <h1>Model Loader</h1>
+  <div>
+    <button (click)="startRecording()">Start Recording</button>
+    <button (click)="stopRecording()">Stop Recording</button>
+    <button (click)="transcribe()">Transcribe</button>
+    <audio *ngIf="audioUrl" [src]="audioUrl" controls></audio>
+  </div>
+  <button (click)="loadModel()" [disabled]="isModelLoading">Reload Model</button> -->
+<!-- </div> --> 
+
+<div>
+  <input type="file" (change)="onFileSelected($event)" accept=".wav" />
+  <div *ngIf="isBusy">Transcribing...</div>
+  <div *ngIf="result">{{ result }}</div>
+</div>
+
