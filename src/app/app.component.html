@@ -1,0 +1,8 @@
+<div>
+  <input type="file" (change)="onFileSelected($event)" accept=".wav" />
+  <div *ngIf="isBusy">Transcribing...</div>
+  <div *ngIf="result">{{ result }}</div>
+  <div>
+    <button (click)="toggleRecording()">{{ buttonLabel }}</button>
+  </div>
+</div>
